@@ -2,8 +2,8 @@ import EmailItem from "../EmailItem"
 
 const EmailList = () => {
     return (
-        <div class="container">
-            <div className="row col-3">
+        <div class="container w-25">
+            <div className="row">
                 <EmailItem 
                 name="Joe Bloggs" 
                 subject="where are my keys?" 
@@ -11,7 +11,7 @@ const EmailList = () => {
                 date_created="2022-06-30 18:01:08"
                 read="0"/>
             </div>
-            <div className="row col-3">
+            <div className="row">
                 <EmailItem 
                 name="Joe Bloggs" 
                 subject="where are my keys?" 
@@ -19,7 +19,7 @@ const EmailList = () => {
                 date_created="2022-06-30 18:01:08"
                 read="1"/>
             </div>
-            <div className="row col-3">
+            <div className="row">
                 <EmailItem 
                 name="Joe Bloggs" 
                 subject="where are my keys?" 

@@ -7,8 +7,7 @@ const Inbox = () => {
     async function getEmails() {
         let response = await fetch('http://localhost:8080/emails')
         let emails = await response.json()
-        setEmails(emails)
-        
+        setEmails(emails)   
     }
 
     useEffect(() => {
@@ -17,10 +16,10 @@ const Inbox = () => {
     
     return (
         <ul>
-        {emails ? emails.data.map(email => {
-                return <li key={email.name}>{email.name}</li>
-        }) : 'loading...'}
-    </ul>
+            {emails ? emails.data.map(email => {
+            return <li key={email.name}>{email.name}</li>
+            }) : 'loading...'}
+        </ul>
     )
 }
 

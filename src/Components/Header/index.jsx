@@ -5,8 +5,6 @@ const Header = () => {
 
     const [displayMenu, setDisplayMenu] = useState(false)
 
-    
-    
     return (
         <div className="h-100 w-100">
             <div className="row d-flex justify-content-between align-items-center border border-secondary bg-secondary text-white">

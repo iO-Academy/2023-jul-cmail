@@ -7,3 +7,4 @@ const OpenEmail = () => {
     )
 
 }
+export default OpenEmail

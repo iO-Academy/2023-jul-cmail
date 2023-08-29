@@ -7,6 +7,17 @@ const EmailList = () => {
             name="Joe Bloggs" 
             subject="where are my keys?" 
             body="Mate I am locked out...." 
+            date_created="29-07-2023"
+            read="0"/>
+            <EmailItem 
+            name="Joe Bloggs" 
+            subject="where are my keys?" 
+            body="Mate I am locked out...." 
+            date_created="29-07-2023"/>
+            <EmailItem 
+            name="Joe Bloggs" 
+            subject="where are my keys?" 
+            body="Mate I am locked out...." 
             date_created="29-07-2023"/>
             
         </>

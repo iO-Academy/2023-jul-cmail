@@ -1,3 +1,5 @@
+import EmailList from "../EmailItem"
+
 const Inbox = () => {
 
 }

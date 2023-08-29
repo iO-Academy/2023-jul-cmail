@@ -1,35 +1,25 @@
 import EmailItem from "../EmailItem"
 
-const EmailList = () => {
+const EmailList = ({emails}) => {
+    const createEmailItem = (emails) => {
+        emails.data.map(email => {
+            return (
+                <div className="row">
+                    <EmailItem 
+                        name={email.name} 
+                        subject={email.subject} 
+                        body={email.body}
+                        date_created={email.date_created}
+                        read={email.read}
+                    />
+                </div>
+            )
+            })
+    }
+    
     return (
-        <div class="container w-25">
-            <div className="row">
-                <EmailItem 
-                    name="Joe Bloggs" 
-                    subject="where are my keys?" 
-                    body="Mate I am locked out...." 
-                    date_created="2022-06-30 18:01:08"
-                    read="0"
-                />
-            </div>
-            <div className="row">
-                <EmailItem 
-                    name="Joe Bloggs" 
-                    subject="where are my keys?" 
-                    body="Mate I am locked out...." 
-                    date_created="2022-06-30 18:01:08"
-                    read="1"
-                />
-            </div>
-            <div className="row">
-                <EmailItem 
-                    name="Joe Bloggs" 
-                    subject="where are my keys?" 
-                    body="Mate I am locked out...." 
-                    date_created="2022-06-30 18:01:08"
-                    read="0"
-                />
-            </div>
+        <div class="container w-25" onLoad={createEmailItem()}>
+            
         </div>
     )
 }

@@ -1,13 +1,13 @@
 import { useState } from "react"
-import EmailList from "../EmailItem"
+import EmailList from "../EmailList"
 import { useEffect } from "react"
 
 const Inbox = () => {
-    const [emails, setEmails ] = useState(false)
+    const [emails, setEmails] = useState(false)
     async function getEmails() {
         let response = await fetch('http://localhost:8080/emails')
-        let emails = await response.json()
-        setEmails(emails)   
+        let emailsData = await response.json()
+        setEmails(emailsData)   
     }
 
     useEffect(() => {
@@ -15,12 +15,11 @@ const Inbox = () => {
     }, [])
     
     return (
-        <ul>
-            {emails ? emails.data.map(email => {
-            return <li key={email.name}>{email.name}</li>
-            }) : 'loading...'}
-        </ul>
+        <>
+            {emails ? <EmailList emails={emails}/> : 'loading...'}
+        </>
     )
 }
 
 export default Inbox
+

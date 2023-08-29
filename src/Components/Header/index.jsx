@@ -1,5 +1,13 @@
+import {useEffect, useState} from "react"
 
-const Header = () => {
+
+const Header = ({inboxCounter}) => {
+
+
+        return (
+        <div className="badge text-bg-warning">{inboxCounter}</div>
+
+        )
 
 }
 

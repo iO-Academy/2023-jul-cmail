@@ -1,11 +1,11 @@
-import EmailItem from "../EmailItem"
+import EmailPreview from "../EmailPreview"
 
 const EmailList = ({emails}) => {
     
     return (
         <div className="container w-25">
             {emails.map(email => 
-                    <EmailItem
+                    <EmailPreview
                         key={email.id} 
                         name={email.name} 
                         subject={email.subject} 

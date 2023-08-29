@@ -1,6 +1,6 @@
-import './EmailItem.css'
+import './EmailPreview.css'
 
-const EmailItem = ({name, subject, body, date_created, read}) => {
+const EmailPreview = ({name, subject, body, date_created, read}) => {
     let dateObj = new Date(date_created)
     let day = dateObj.getDate()
     let month = dateObj.getMonth()
@@ -23,4 +23,4 @@ const EmailItem = ({name, subject, body, date_created, read}) => {
     )
 }
 
-export default EmailItem
+export default EmailPreview

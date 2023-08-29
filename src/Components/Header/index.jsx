@@ -1,7 +1,7 @@
 import "bootstrap-icons/font/bootstrap-icons.css"
 import { useState } from "react"
 
-const Header = (click) => {
+const Header = () => {
 
     const [displayMenu, setDisplayMenu] = useState(false)
 

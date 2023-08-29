@@ -10,7 +10,7 @@ const EmailItem = ({name, subject, body, date_created, read}) => {
     return (
         <>
             <div className={"card row col-12" + (read == 0 ? ' text-bg-secondary' : '')}>
-                <div className="card-body ">
+                <div className="card-body">
                     <div className="d-flex justify-content-between">
                         <h2 className="card-title">{name}</h2>
                         <p>{formattedDate}</p>

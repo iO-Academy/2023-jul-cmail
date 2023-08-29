@@ -1,9 +1,10 @@
 import EmailPreview from "../EmailPreview"
+import './EmailList.css'
 
 const EmailList = ({emails}) => {
     
     return (
-        <div className="container w-25">
+        <div className="col-3 email-list">
             {emails.map(email => 
                     <EmailPreview
                         key={email.id} 

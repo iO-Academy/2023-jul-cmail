@@ -1,0 +1,9 @@
+const OpenEmail = () => {
+
+    return (
+        <>
+        
+        </>
+    )
+
+}

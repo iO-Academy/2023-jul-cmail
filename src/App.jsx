@@ -1,9 +1,10 @@
-import { useState } from 'react'
 import './App.css'
+import EmailItem from './Components/EmailItem'
+import EmailList from './Components/EmailList'
+import Header from './Components/Header'
+import Inbox from './Components/Inbox'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
      

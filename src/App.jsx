@@ -5,7 +5,6 @@ import Inbox from './Components/Inbox'
 function App() {
   return (
     <>
-      <EmailList/>
       <Inbox/>
     </>
   )

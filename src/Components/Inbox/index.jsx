@@ -7,7 +7,7 @@ const Inbox = () => {
     async function getEmails() {
         let response = await fetch('http://localhost:8080/emails')
         let emailsData = await response.json()
-        setEmails(emailsData)   
+        setEmails(emailsData.data)   
     }
 
     useEffect(() => {
@@ -16,7 +16,7 @@ const Inbox = () => {
     
     return (
         <>
-            {emails ? <EmailList emails={emails}/> : 'loading...'}
+            {emails && <EmailList emails={emails}/>}
         </>
     )
 }

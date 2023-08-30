@@ -5,7 +5,7 @@ const OpenEmail = () => {
     return (
         <> 
           <div className="px-5 py-5 col-md-7 col-lg-8 d-sm-none d-md-block d-lg-block">
-            <button className="border border-black text-center" type="button">Close</button>  
+            <button className="border rounded border-black text-center" type="button">Close</button>  
               <div className="border border-start-0 border-end-0 border-top border-bottom mt-3 py-5"> 
                 <div className="d-flex justify-content-between">
                   <h3>Sender's name ({"email.name"})</h3><span>({"email.date_created"}) Date goes here</span>

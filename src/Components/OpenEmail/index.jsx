@@ -4,7 +4,7 @@ const OpenEmail = () => {
   
     return (
         <> 
-          <div className="px-5 py-5 col-md-7 col-lg-8 d-sm-none d-md-block d-lg-block">
+          <div className="px-5 py-5 col-9 col-xs-9 col-sm-9 col-md-7 col-lg-8 d-md-block d-lg-block">
             <button className="border rounded btn btn-secondary border-black text-center" type="button">Close</button>  
               <div className="border border-start-0 border-end-0 border-top border-bottom mt-3 py-5"> 
                 <div className="d-flex justify-content-between">

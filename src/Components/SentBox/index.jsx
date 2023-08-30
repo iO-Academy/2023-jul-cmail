@@ -1,4 +1,4 @@
-const SentEmail = () => {
+const SentBox = () => {
     return (
         <>
         
@@ -6,4 +6,4 @@ const SentEmail = () => {
     )
 }
 
-export default SentEmail
+export default SentBox

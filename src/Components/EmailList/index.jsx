@@ -1,35 +1,20 @@
-import EmailItem from "../EmailItem"
+import EmailPreview from "../EmailPreview"
+import './EmailList.css'
 
-const EmailList = () => {
+const EmailList = ({emails}) => {
+    
     return (
-        <div className="container w-25">
-            <div className="row">
-                <EmailItem 
-                    name="Joe Bloggs" 
-                    subject="where are my keys?" 
-                    body="Mate I am locked out...." 
-                    date_created="2022-06-30 18:01:08"
-                    read="0"
+        <div className="col-12 col-sm-12 col-md-4 col-lg-3 email-list">
+            {emails.map(email => 
+                <EmailPreview
+                    key={email.id} 
+                    name={email.name} 
+                    subject={email.subject} 
+                    body={email.body}
+                    date_created={email.date_created}
+                    read={email.read}
                 />
-            </div>
-            <div className="row">
-                <EmailItem 
-                    name="Joe Bloggs" 
-                    subject="where are my keys?" 
-                    body="Mate I am locked out...." 
-                    date_created="2022-06-30 18:01:08"
-                    read="1"
-                />
-            </div>
-            <div className="row">
-                <EmailItem 
-                    name="Joe Bloggs" 
-                    subject="where are my keys?" 
-                    body="Mate I am locked out...." 
-                    date_created="2022-06-30 18:01:08"
-                    read="0"
-                />
-            </div>
+            )}
         </div>
     )
 }

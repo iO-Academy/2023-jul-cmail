@@ -11,8 +11,10 @@ const [emailId, setEmailId] = useState(false)
   return (
     <div className="row h-100 g-0">
       <Header/>
-      <Inbox setEmailId={setEmailId}/>
-      <OpenEmail emailId={emailId}/>
+    
+          <Inbox emailId={emailId} setEmailId={setEmailId}/>
+          <OpenEmail emailId={emailId}/>
+        
     </div>
   )
 }

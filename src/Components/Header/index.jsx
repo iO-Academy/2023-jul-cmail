@@ -12,7 +12,7 @@ const Header = ({inboxCounter}) => {
                 <div className="col-2 d-md-none">
                     <button onClick={() => {setDisplayMenu(!displayMenu)}} className="mx-3 border border-black btn btn-secondary text-center" type="button" aria-expanded="false">MENU</button>
                 </div>
-                <h1 className="col-7 px-4 py-2 d-flex align-self-end">Email Client</h1>
+                <h1 className="col-7 px-4 py-2 d-flex align-self-center">Email Client</h1>
                 <div className="col-3 text-end pe-3">
                     <i className="px-3 bi bi-person-circle fs-2"></i>
                     <span>User Name</span>

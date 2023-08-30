@@ -17,6 +17,17 @@ const OpenEmail = ({emailId, setRefreshEmails}) => {
         setEmail(email.data.email)
     }
 
+    const [formattedDate, setFormattedDate] = useState()
+    
+    useEffect(() => {
+        const dateObj = new Date(email.date_created)
+        const day = dateObj.getDate()
+        const month = dateObj.getMonth()
+        const year = dateObj.getFullYear()
+        const formattedDate = `${day}/${month}/${year}`
+        setFormattedDate(formattedDate)
+    }, [email.date_created])
+    
     useEffect(() => {
         getEmail()
         .then(setEmailAsRead)
@@ -31,7 +42,7 @@ const OpenEmail = ({emailId, setRefreshEmails}) => {
             <button className="border rounded btn btn-secondary border-black text-center" type="button">Close</button>  
               <div className="border border-start-0 border-end-0 border-top border-bottom mt-3 py-5"> 
                 <div className="d-flex justify-content-between">
-                  <h3>{email.name}</h3><span>{email.date_created}</span>
+                  <h3>{email.name}</h3><span>{formattedDate}</span>
                 </div>
                   <p>{email.email}</p>
                   <h2>{email.subject}</h2>

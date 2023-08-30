@@ -1,6 +1,6 @@
 import Header from './Components/Header'
 import Inbox from './Components/Inbox'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 
 function App() {

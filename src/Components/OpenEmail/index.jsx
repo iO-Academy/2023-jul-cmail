@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import EmailPreview from "../EmailPreview"
+import {formatDate} from '../../Utilities/DateFormatter'
 import './OpenEmail.css'
 
 const OpenEmail = ({emailId, setRefreshEmails}) => {
@@ -20,11 +20,7 @@ const OpenEmail = ({emailId, setRefreshEmails}) => {
     const [formattedDate, setFormattedDate] = useState()
     
     useEffect(() => {
-        const dateObj = new Date(email.date_created)
-        const day = dateObj.getDate()
-        const month = dateObj.getMonth()
-        const year = dateObj.getFullYear()
-        const formattedDate = `${day}/${month}/${year}`
+        const formattedDate = formatDate(email.date_created)
         setFormattedDate(formattedDate)
     }, [email.date_created])
     

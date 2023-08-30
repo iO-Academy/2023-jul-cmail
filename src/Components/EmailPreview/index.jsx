@@ -1,14 +1,11 @@
 import { useEffect, useState } from "react"
+import {formatDate} from "../../Utilities/DateFormatter"
 
 const EmailPreview = ({name, subject, body, date_created, read, setEmailId, id, selected}) => {
     const [formattedDate, setFormattedDate] = useState()
     
     useEffect(() => {
-        const dateObj = new Date(date_created)
-        const day = dateObj.getDate()
-        const month = dateObj.getMonth()
-        const year = dateObj.getFullYear()
-        const formattedDate = `${day}/${month}/${year}`
+        const formattedDate = formatDate(date_created)
         setFormattedDate(formattedDate)
     }, [date_created])
 

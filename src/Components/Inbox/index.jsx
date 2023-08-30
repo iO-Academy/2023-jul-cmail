@@ -1,5 +1,5 @@
 import { useState } from "react"
-import EmailList from "../EmailItem"
+import EmailList from "../EmailList"
 import { useEffect } from "react"
 
 const Inbox = ({setInboxCount}) => {
@@ -22,12 +22,11 @@ const Inbox = ({setInboxCount}) => {
     }, [])
     
     return (
-        <ul>
-            {emails ? emails.map(email => {
-            return <li key={email.name}>{email.name}</li>
-            }) : 'loading...'}
-        </ul>
+        <>
+            {emails && <EmailList emails={emails}/>}
+        </>
     )
 }
 
 export default Inbox
+

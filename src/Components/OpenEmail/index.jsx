@@ -1,4 +1,4 @@
-const OpenEmail = () => {
+const OpenEmail = ({emailId}) => {
 
   // const [displayOpenEmail, setDisplayOpenEmail] = useState(false)
   

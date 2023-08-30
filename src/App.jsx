@@ -1,14 +1,17 @@
+import Header from './Components/Header'
+import Inbox from './Components/Inbox'
 import { useState } from 'react'
-import './App.css'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [inboxCount, setInboxCount] = useState(0)
 
   return (
-    <>
-     
-    </>
+    <div className="row h-100 g-0">
+      <Header inboxCounter={inboxCount}/>
+      <Inbox setInboxCount={setInboxCount}/>
+    </div>
   )
-}
-
+  }
+  
 export default App

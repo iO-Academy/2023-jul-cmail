@@ -4,7 +4,7 @@ import './EmailList.css'
 const EmailList = ({emails}) => {
     
     return (
-        <div className="col-12 col-md-4 col-lg-3 email-list">
+        <div className="col-12 col-md-4 col-lg-3 email-list border-end">
             {emails.map(email => 
                 <EmailPreview
                     key={email.id} 

@@ -13,7 +13,7 @@ const EmailPreview = ({name, subject, body, date_created, read}) => {
     }, [date_created])
 
     return (
-        <div className={"border-bottom p-2" + (read == 0 ? ' text-bg-secondary border-white' : '')}>
+        <div className={"border-bottom p-3" + (read == 0 ? ' text-bg-secondary border-white' : '')}>
             <div className="card-body">
                 <div className="d-flex justify-content-between">
                     <h2 className="card-title fs-4">{name}</h2>

@@ -1,3 +1,11 @@
 a:hover {
     background-color: rgb(96, 225, 225);
 }
+
+.new-email {
+    background-color: rgb(74, 81, 217);
+}
+
+.new-email:hover {
+    background-color: rgb(62, 26, 223);
+}

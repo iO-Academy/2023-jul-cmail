@@ -19,13 +19,13 @@ const Header = ({inboxCounter}) => {
                 </div>
             </div>
             <div className={"fs-4 col-4 col-md-2 col-lg-1 h-100 bg-info text-dark d-md-block" + (displayMenu ? '' : ' d-none')}>
-                <a className="d-block px-3 py-4 text-white link-underline link-underline-opacity-0 link-underline-opacity-100-hover bg-primary" href="#">New Email</a>
-                <a className="d-block px-3 py-4 text-white link-underline link-underline-opacity-0 link-underline-opacity-75-hover d-flex justify-content-between" href="#">
+                <a className="d-block px-3 py-4 text-white link-underline link-underline-opacity-0 new-email" href="#">New Email</a>
+                <a className="d-block px-3 py-4 text-white link-underline link-underline-opacity-0 d-flex justify-content-between" href="#">
                     <span>Inbox</span>
                     <div><span className="badge text-bg-warning">{inboxCounter}</span></div>
                 </a>
-                <a className="d-block px-3 py-4 text-white link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">Sent</a>
-                <a className="d-block px-3 py-4 text-white link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">Deleted</a>
+                <a className="d-block px-3 py-4 text-white link-underline link-underline-opacity-0" href="#">Sent</a>
+                <a className="d-block px-3 py-4 text-white link-underline link-underline-opacity-0" href="#">Deleted</a>
             </div> 
         </>
     )

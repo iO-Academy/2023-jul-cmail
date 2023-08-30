@@ -10,7 +10,7 @@ const Header = ({inboxCounter}) => {
         <>
             <div className="col-12 d-flex justify-content-between align-items-center border border-secondary bg-secondary text-white">
                 <div className="col-2 d-md-none">
-                    <button onClick={() => {setDisplayMenu(!displayMenu)}} className="mx-3 border border-black btn btn-secondary text-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">MENU</button>
+                    <button onClick={() => {setDisplayMenu(!displayMenu)}} className="mx-3 border border-black btn btn-secondary text-center" type="button" aria-expanded="false">MENU</button>
                 </div>
                 <h1 className="col-7 px-4 py-2 d-flex align-self-end">Email Client</h1>
                 <div className="col-3 text-end pe-3">

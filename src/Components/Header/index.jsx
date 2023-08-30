@@ -8,9 +8,11 @@ const Header = () => {
     return (
         <>
             <div className="col-12 d-flex justify-content-between align-items-center border border-secondary bg-secondary text-white">
-                <button onClick={() => {setDisplayMenu(!displayMenu)}} className="col-2 mx-3 border border-black btn btn-secondary d-md-none text-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">MENU</button>
-                <h1 className="col-11 px-4 py-2 d-flex align-self-end">Email Client</h1>
-                <div className="col-1">
+                <div className="col-2 d-md-none">
+                    <button onClick={() => {setDisplayMenu(!displayMenu)}} className="mx-3 border border-black btn btn-secondary text-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">MENU</button>
+                </div>
+                <h1 className="col-7 px-4 py-2 d-flex align-self-end">Email Client</h1>
+                <div className="col-3 text-end pe-3">
                     <i className="px-3 bi bi-person-circle fs-2"></i>
                     <span>User Name</span>
                 </div>

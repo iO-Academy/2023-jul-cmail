@@ -1,23 +1,23 @@
 import { useEffect, useState } from "react"
+import EmailPreview from "../EmailPreview"
 
-const OpenEmail = () => {
-    const [emails, setEmails ] = useState(false)
-    const getEmails =  async () => {
-        let response = await fetch('http://localhost:8080/emails')
-        let emails = await response.json()
-        setEmails(emails.data)
+const OpenEmail = ({id}) => {
+    const [email, setEmail ] = useState(false)
+    const getEmail =  async () => {
+        let response = await fetch(`http://localhost:8080/emails/${id}`)
+        let email = await response.json()
+        setEmail(email.data.email)
     }
 
     useEffect(() => {
-        getEmails()
+        getEmail()
     }, [])
     
     return (
-        <ul>
-            {emails ? emails.map(email => {
-            return <li key={email.id}>{email.id}</li>
-            }) : 'loading...'}
-        </ul>
+        <div>
+            {email.id}
+        </div>
+
     ) 
 }
 

@@ -1,12 +1,15 @@
 const OpenEmail = () => {
 
     return (
-        <>
-          <h3>Someone's name</h3>
-          <p>someonesname@gmail.com</p>
-          <h2>Email subject</h2>
-          <p>uofbf4u4r 4uvhof4boif4fh f4 nohi2fhfio4hfo4i hoifhfoif4hif hoi4fhfoi4v</p>  
-        </>
+        <div className="px-5 py-5 col-md-7 col-lg-8 d-sm-none d-md-block d-lg-block">
+            <div className="d-flex justify-content-between">
+              <h3>Sender's name</h3><span>Date goes here</span>
+            </div>
+              <p>someonesname@gmail.com</p>
+              <h2>Email subject</h2>
+              <p>Dear user, </p>
+              <p>Body of email goes here. blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>  
+        </div>
     )
 
 }

@@ -20,12 +20,12 @@ const OpenEmail = ({emailId}) => {
             <button className="border rounded btn btn-secondary border-black text-center" type="button">Close</button>  
               <div className="border border-start-0 border-end-0 border-top border-bottom mt-3 py-5"> 
                 <div className="d-flex justify-content-between">
-                  <h3>({email.name})</h3><span>({email.date_created})</span>
+                  <h3>{email.name}</h3><span>{email.date_created}</span>
                 </div>
-                  <p>({email.email})</p>
-                  <h2>({email.subject})</h2>
-                  <p>({email.body})</p>
-                  <p>({email.body})</p> 
+                  <p>{email.email}</p>
+                  <h2>{email.subject}</h2>
+                  <p>{email.body}</p>
+                  <p>{email.body}</p> 
                 </div> 
           </div>
         </>

@@ -1,7 +1,7 @@
 import Header from './Components/Header'
 import OpenEmail from './Components/OpenEmail'
 import Inbox from './Components/Inbox'
-import {useState } from 'react'
+import { useState } from 'react'
 
 
 function App() {

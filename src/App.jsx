@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="row h-100 g-0">
       <Header inboxCounter={inboxCount}/>
-      <Inbox setInboxCount={setInboxCount} setEmailId={setEmailId}/>
+      <Inbox emailId={emailId} setInboxCount={setInboxCount} setEmailId={setEmailId}/>
       {emailId && <OpenEmail emailId={emailId}/>}
     </div>
   )

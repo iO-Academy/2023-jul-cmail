@@ -1,10 +1,10 @@
 import EmailPreview from "../EmailPreview"
 import './EmailList.css'
 
-const EmailList = ({emails, setEmailId}) => {
+const EmailList = ({emails, setEmailId, emailId}) => {
     
     return (
-        <div className="col-3 col-xs-3 col-sm-3 col-md-4 col-lg-3 email-list">
+        <div className={"col-12 col-xs-12 col-sm-12 col-md-4 col-lg-3 email-list" + (emailId ? " d-none d-md-block" : '')}>
             {emails.map(email => 
                     <EmailPreview
                         setEmailId={setEmailId}

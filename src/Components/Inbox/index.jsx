@@ -2,7 +2,7 @@ import { useState } from "react"
 import EmailList from "../EmailList"
 import { useEffect } from "react"
 
-const Inbox = () => {
+const Inbox = ({setEmailId}) => {
     const [emails, setEmails] = useState(false)
     async function getEmails() {
         let response = await fetch('http://localhost:8080/emails')
@@ -16,7 +16,7 @@ const Inbox = () => {
     
     return (
         <>
-            {emails && <EmailList emails={emails}/>}
+            {emails && <EmailList emails={emails} setEmailId={setEmailId}/>}
         </>
     )
 }

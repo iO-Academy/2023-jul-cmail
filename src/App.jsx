@@ -7,12 +7,13 @@ import { useState } from 'react'
 function App() {
   const [inboxCount, setInboxCount] = useState(0)
   const [emailId, setEmailId] = useState(false)
-
+  const [refreshEmails, setRefreshEmails] = useState(false)
+  
   return (
     <div className="row h-100 g-0">
       <Header inboxCounter={inboxCount}/>
-      <Inbox emailId={emailId} setInboxCount={setInboxCount} setEmailId={setEmailId}/>
-      {emailId && <OpenEmail emailId={emailId}/>}
+      <Inbox emailId={emailId} setInboxCount={setInboxCount} setEmailId={setEmailId} refreshEmails={refreshEmails}/>
+      {emailId && <OpenEmail emailId={emailId} setRefreshEmails={setRefreshEmails}/>}
     </div>
   )
 }

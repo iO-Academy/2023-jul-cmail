@@ -2,9 +2,16 @@ import { useEffect, useState } from "react"
 import EmailPreview from "../EmailPreview"
 import './OpenEmail.css'
 
-const OpenEmail = ({emailId}) => {
+const OpenEmail = ({emailId, setRefreshEmails}) => {
     const [email, setEmail ] = useState(false)
-    const getEmail =  async () => {
+
+    const setEmailAsRead = async () => {
+      await fetch(`http://localhost:8080/emails/${emailId}`, {
+        method: 'PUT'
+      })
+    }
+
+    const getEmail = async () => {
         let response = await fetch(`http://localhost:8080/emails/${emailId}`)
         let email = await response.json()
         setEmail(email.data.email)
@@ -12,6 +19,10 @@ const OpenEmail = ({emailId}) => {
 
     useEffect(() => {
         getEmail()
+        .then(setEmailAsRead)
+        .then(() => {
+          setRefreshEmails(emailId)
+        })
     }, [emailId])
     
     return (

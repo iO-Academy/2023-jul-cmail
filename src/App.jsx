@@ -8,8 +8,6 @@ import Button from './Components/Button'
 function App() {
   const [inboxCount, setInboxCount] = useState(0)
   const [emailId, setEmailId] = useState(false)
-  // const [closeButton,setCloseButton] = useState(false)
-
   const closeEmail = () => {
     setEmailId(false)
   }

@@ -11,9 +11,6 @@ const OpenEmail = ({emailId, closeEmail}) => {
         setEmail(email.data.email)
     }
 
-    // const [closeButton, setCloseButton] = useState(false)
-
-
     useEffect(() => {
         getEmail()
     }, [emailId])

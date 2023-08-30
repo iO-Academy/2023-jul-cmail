@@ -2,7 +2,7 @@ import EmailItem from "../EmailItem"
 
 const EmailList = () => {
     return (
-        <div class="container w-25">
+        <div className="container w-25">
             <div className="row">
                 <EmailItem 
                     name="Joe Bloggs" 

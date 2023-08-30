@@ -11,6 +11,8 @@ function App() {
     <>
       <Header/>
       <EmailList/>
+      <OpenEmail/>
+      <Inbox/>
     </>
   )
 }

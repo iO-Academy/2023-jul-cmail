@@ -5,21 +5,16 @@ import {useState } from 'react'
 
 
 function App() {
-
-const [emailId, setEmailId] = useState(false)
+  const [inboxCount, setInboxCount] = useState(0)
+  const [emailId, setEmailId] = useState(false)
 
   return (
     <div className="row h-100 g-0">
-      <Header/>
-    
-          <Inbox emailId={emailId} setEmailId={setEmailId}/>
-          <OpenEmail emailId={emailId}/>
-        
+      <Header inboxCounter={inboxCount}/>
+      <Inbox emailId={emailId} setInboxCount={setInboxCount} setEmailId={setEmailId}/>
+      {emailId && <OpenEmail emailId={emailId}/>}
     </div>
   )
 }
 
-  
-  
-  
 export default App

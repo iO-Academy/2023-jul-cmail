@@ -19,7 +19,7 @@ const Header = ({inboxCounter,setEmailListToDisplay, emailListToDisplay}) => {
                     <span>User Name</span>
                 </div>
             </div>
-            <div className={"fs-4 col-4 col-md-2 col-lg-1 h-100 bg-info text-dark d-md-block" + (displayMenu ? '' : ' d-none')}>
+            <div className={"z-1 fs-4 col-4 col-md-2 col-lg-1 h-100 bg-info text-dark d-md-block" + (displayMenu ? '' : ' d-none')}>
                 <a className="d-block px-3 py-4 text-white link-underline link-underline-opacity-0 new-email" href="#">New Email</a>
                 <a onClick={() => {
                     setEmailListToDisplay('inbox')

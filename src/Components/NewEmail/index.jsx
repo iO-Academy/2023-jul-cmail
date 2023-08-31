@@ -16,7 +16,7 @@ const NewEmail = ({handleInput}) => {
             <label htmlFor="emailContent" className="form-label"></label>
             <textarea className="form-control" rows="10"></textarea>
             </div>
-        <div className="mt-4 ml-2 d-flex justify-content-end">
+        <div className="mt-4 ms-2 d-flex justify-content-end">
             <button type="button" className="btn btn-secondary">Cancel</button>
             <button type="button" className="btn btn-success">Send</button>
         </div>

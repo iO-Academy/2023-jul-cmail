@@ -3,16 +3,22 @@ import "./NewEmail.css"
 const NewEmail = ({handleInput}) => {
 
 
+
     // const isEmailValid =  /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
     // const validateEmail = () => {
     //     if(handleInput.value && handleInput.match(isEmailValid))
     // }
+        const  isValidEmail = () => {
+            if(!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(handleInput) ) {
+                alert("You have entered a invalid email")
+            }
+        } 
 
     return (
         <div className="col-12 h-xs-100 col-md-7 offset-md-2 offset-lg-1 col-lg-5 newEmail bg-white position-fixed border"> 
             <div className="mb-3">      
                 <label htmlFor="to" className="form-label"></label>
-                <input onInput={handleInput} type="email" className="form-control form-control-lg" placeholder="To"></input>
+                <input isValidEmail={handleInput} onInput={handleInput} type="email" className="form-control form-control-lg" placeholder="To"></input>
             </div>
             <div className="mb-3">
                 <label htmlFor="subject" className="form-label"></label>

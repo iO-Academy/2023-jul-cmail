@@ -46,14 +46,13 @@ const OpenEmail = ({emailId, setRefreshEmails, closeEmail}) => {
               <div className="d-flex justify-content-between">
                 <h3>{email.name}</h3><span>{formattedDate}</span>
               </div>
-                <p>{email.email}</p>
-                <h2>{email.subject}</h2>
-                <p>{email.body}</p>
+              <p>{email.email}</p>
+              <h2>{email.subject}</h2>
+              <p>{email.body}</p>
             </div> 
-          </>
-          )
+          </>)
           :
-          (<h1 className="pt-5 text-center text-danger">{error}</h1>)}
+          (<p className="h1 pt-5 text-center text-danger">{error}</p>)}
       </div>
     )
 }

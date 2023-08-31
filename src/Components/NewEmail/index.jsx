@@ -1,12 +1,12 @@
 import "./NewEmail.css"
 
-const NewEmail = ({handleInput}) => {
+const NewEmail = () => {
 
     return (
         <div className="col-12 col-md-7 offset-md-2 offset-lg-1 col-lg-5 newEmail bg-white position-fixed border"> 
             <div className="mb-3">      
                 <label htmlFor="to" className="form-label"></label>
-                <input onInput={handleInput} type="email" className="form-control form-control-lg" placeholder="To"></input>
+                <input type="email" className="form-control form-control-lg" placeholder="To"></input>
             </div>
             <div className="mb-3">
                 <label htmlFor="subject" className="form-label"></label>

@@ -3,7 +3,7 @@ import './EmailList.css'
 
 const EmailList = ({emails, setEmailId, emailId}) => {
     return (
-        <div className={"col-12 col-md-4 col-lg-3 email-list border-end" + (emailId ? " d-none d-md-block" : '')}>
+        <div className={(emailId ? " d-none d-md-block" : '')}>
             {emails.map(email => 
                 <EmailPreview
                     setEmailId={setEmailId}

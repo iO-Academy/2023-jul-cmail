@@ -1,8 +1,9 @@
 import "bootstrap-icons/font/bootstrap-icons.css"
 import { useState } from "react"
+import "./Header.css"
 
 
-const Header = ({inboxCounter}) => {
+const Header = ({inboxCounter,setEmailListToDisplay, emailListToDisplay}) => {
 
     const [displayMenu, setDisplayMenu] = useState(false)
 
@@ -20,12 +21,16 @@ const Header = ({inboxCounter}) => {
             </div>
             <div className={"col-4 col-md-1 h-100 bg-info text-dark d-md-block" + (displayMenu ? '' : ' d-none')}>
                 <a className="d-block px-2 py-3 text-white link-underline link-underline-opacity-0 bg-primary" href="#">New Email</a> <br />
-                <a className="d-block px-2 py-3 text-white link-underline link-underline-opacity-0 d-flex justify-content-between" href="#">
+                <a onClick={() => {
+                    setEmailListToDisplay('inbox')
+                }} className={"d-block px-2 py-3 text-white link-underline link-underline-opacity-0 d-flex justify-content-between" + (emailListToDisplay == 'inbox' ? ' active' : '')} href="#">
                     <span>Inbox</span>
                     <div><span className="badge text-bg-warning">{inboxCounter}</span></div>
                 </a> <br />
-                <a className="d-block px-2 py-3 text-white link-underline link-underline-opacity-0" href="#">Sent</a> <br />
-                <a className="d-block px-2 py-3 text-white link-underline link-underline-opacity-0" href="#">Deleted</a> <br />
+                <a onClick={() => {
+                    setEmailListToDisplay('sent')
+                        }} className={"d-block px-2 py-3 text-white link-underline link-underline-opacity-0" + (emailListToDisplay == 'sent' ? ' active' : '')} href="#">Sent</a> <br />
+                <a className={"d-block px-2 py-3 text-white link-underline link-underline-opacity-0" + (emailListToDisplay == 'deleted' ? ' active' : '')} href="#">Deleted</a> <br />
             </div> 
             
         </>

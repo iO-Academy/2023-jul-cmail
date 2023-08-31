@@ -10,7 +10,7 @@ const Header = ({inboxCounter,setEmailListToDisplay, emailListToDisplay, openNew
 
     return (
         <>
-            <div className="col-12 d-flex justify-content-between align-items-center border border-secondary bg-secondary text-white">
+            <div className="col-12 d-flex justify-content-between align-items-center border-secondary bg-secondary text-white">
                 <div className="col-2 d-md-none">
                     <button onClick={() => {setDisplayMenu(!displayMenu)}} className="mx-3 border border-black btn btn-secondary text-center" type="button" aria-expanded={displayMenu}>MENU</button>
                 </div>
@@ -25,14 +25,14 @@ const Header = ({inboxCounter,setEmailListToDisplay, emailListToDisplay, openNew
                 className="d-block px-3 py-4 text-white link-underline link-underline-opacity-0 new-email" href="#">New Email</a> 
                 <a onClick={() => {
                     setEmailListToDisplay('inbox')
-                }} className={"d-block px-3 py-4 text-white link-underline link-underline-opacity-0 d-flex justify-content-between " + (emailListToDisplay == 'inbox' ? 'active' : '')} href="#">
+                }} className={"d-block px-3 py-4 text-white link-underline link-underline-opacity-0 d-flex justify-content-between" + (emailListToDisplay == 'inbox' ? ' active' : '')} href="#">
                     <span>Inbox</span>
                     <div><span className="badge text-bg-warning">{inboxCounter}</span></div>
-                </a> 
+                </a>
                 <a onClick={() => {
                     setEmailListToDisplay('sent')
-                        }} className={"d-block px-3 py-4 text-white link-underline link-underline-opacity-0 " + (emailListToDisplay == 'sent' ? 'active' : '')} href="#">Sent</a> 
-                <a className={"d-block px-3 py-4 text-white link-underline link-underline-opacity-0 " + (emailListToDisplay == 'deleted' ? 'active' : '')} href="#">Deleted</a> 
+                        }} className={"d-block px-3 py-4 text-white link-underline link-underline-opacity-0" + (emailListToDisplay == 'sent' ? ' active' : '')} href="#">Sent</a>
+                <a className={"d-block px-3 py-4 text-white link-underline link-underline-opacity-0" + (emailListToDisplay == 'deleted' ? ' active' : '')} href="#">Deleted</a>
             </div> 
         </>
     )

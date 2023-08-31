@@ -1,10 +1,11 @@
+import { useState } from 'react'
 import Header from './Components/Header'
 import OpenEmail from './Components/OpenEmail'
 import Inbox from './Components/Inbox'
-import { useState } from 'react'
-import NewEmail from './Components/NewEmail'
 import SentBox from './Components/SentBox'
 import Alert from './Components/Alert'
+import NewEmail from './Components/NewEmail'
+
 
 function App() {
   const [inboxCount, setInboxCount] = useState(0)

@@ -1,6 +1,6 @@
 import "./NewEmail.css"
 
-const NewEmail = () => {
+const NewEmail = ({cancelNewEmail}) => {
 
     return (
         <div className="col-12 col-md-7 offset-md-2 offset-lg-1 col-lg-5 newEmail bg-white position-fixed border"> 
@@ -17,7 +17,7 @@ const NewEmail = () => {
                 <textarea className="form-control" rows="10"></textarea>
                 </div>
             <div className="mt-4 ms-2 d-flex justify-content-end">
-                <button type="button" className="btn btn-secondary m-1">Cancel</button>
+                <button type="button" className="btn btn-secondary m-1" onClick={cancelNewEmail}>Cancel</button>
                 <button type="button" className="btn btn-success m-1">Send</button>
             </div>
         </div>

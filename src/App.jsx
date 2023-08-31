@@ -19,11 +19,15 @@ function App() {
   const openNewEmail = () => {
     setNewEmail(true)
   }
+
+  const cancelNewEmail = () => {
+    setNewEmail(false)
+  }
   
   return (
     <div className="row h-100 g-0">
-      {newEmail && <NewEmail/>}
-      <Header inboxCounter={inboxCount} setEmailListToDisplay={setEmailListToDisplay} emailListToDisplay={emailListToDisplay} setNewEmail={setNewEmail} openNewEmail={openNewEmail}/>
+      {newEmail && <NewEmail cancelNewEmail={cancelNewEmail}/>}
+      <Header inboxCounter={inboxCount} setEmailListToDisplay={setEmailListToDisplay} emailListToDisplay={emailListToDisplay} setNewEmail={setNewEmail} openNewEmail={openNewEmail} />
       {emailListToDisplay == 'inbox' && <Inbox emailId={emailId} setInboxCount={setInboxCount} setEmailId={setEmailId} refreshEmails={refreshEmails}/>}
       {emailListToDisplay == 'sent' && <SentBox emailId={emailId} setInboxCount={setInboxCount} setEmailId={setEmailId} refreshEmails={refreshEmails}/>}
       {emailId && <OpenEmail emailId={emailId} setRefreshEmails={setRefreshEmails} closeEmail={closeEmail}/>}

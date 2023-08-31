@@ -1,6 +1,5 @@
-import { useState } from "react"
 import EmailList from "../EmailList"
-import { useEffect } from "react"
+import { useEffect , useState } from "react"
 
 const SentBox = ({setInboxCount, setEmailId, emailId}) => {
     const [emails, setEmails] = useState(false)

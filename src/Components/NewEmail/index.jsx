@@ -8,7 +8,12 @@ const NewEmail = ({cancelNewEmail, handleInput}) => {
     const [body, setBody] = useState('')
 
     const handleAddress = (e) => {
-        setAddress(e.target.value)
+        if(!isValidEmail(e.target.value)) {
+            setError('Email is invalid')
+        } else {
+            setAddress(e.target.value)
+            setError(null)
+        }
     }
 
     const handleSubject = (e) => {
@@ -40,11 +45,20 @@ const NewEmail = ({cancelNewEmail, handleInput}) => {
         console.log(emailResponseData) 
     }
 
+    const [error, setError] = useState(false)
+
+    function isValidEmail(email) {
+        return /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(email)
+    }
+
     return (
         <div className="col-12 col-md-7 offset-md-2 offset-lg-1 col-lg-5 newEmail bg-white position-fixed border"> 
             <div className="mb-3">      
                 <label htmlFor="to" className="form-label"></label>
-                <input onInput={handleAddress} type="email" className="form-control form-control-lg" placeholder="To"></input>
+                <input onBlur={handleAddress} type="email" className={"form-control form-control-lg" + (error ? " is-invalid" : '')} placeholder="To">
+                </input>
+                    <div className="ps-2 mt-2 fs-6 invalid-feedback">{error}</div>
+                
             </div>
             <div className="mb-3">
                 <label htmlFor="subject" className="form-label"></label>
@@ -62,5 +76,4 @@ const NewEmail = ({cancelNewEmail, handleInput}) => {
     )
 }
 
-export default NewEmail      
-
+export default NewEmail 

@@ -20,19 +20,19 @@ const Header = ({inboxCounter,setEmailListToDisplay, emailListToDisplay, openNew
                     <span>User Name</span>
                 </div>
             </div>
-            <div className={"fs-4 col-4 col-md-2 col-lg-1 h-100 bg-info text-dark d-md-block " + (displayMenu ? '' : 'd-none')}>
+            <div className={"z-1 fs-4 col-4 col-md-2 col-lg-1 h-100 bg-info text-dark d-md-block " + (displayMenu ? '' : 'd-none')}>
                 <a onClick={openNewEmail}
                 className="d-block px-3 py-4 text-white link-underline link-underline-opacity-0 new-email" href="#">New Email</a> 
                 <a onClick={() => {
                     setEmailListToDisplay('inbox')
-                }} className={"d-block px-3 py-4 text-white link-underline link-underline-opacity-0 d-flex justify-content-between " + (emailListToDisplay == 'inbox' ? 'active' : '')} href="#">
+                }} className={"d-block px-3 py-4 text-white link-underline link-underline-opacity-0 d-flex justify-content-between" + (emailListToDisplay == 'inbox' ? ' active' : '')} href="#">
                     <span>Inbox</span>
                     <div><span className="badge text-bg-warning">{inboxCounter}</span></div>
-                </a> 
+                </a>
                 <a onClick={() => {
                     setEmailListToDisplay('sent')
-                        }} className={"d-block px-3 py-4 text-white link-underline link-underline-opacity-0 " + (emailListToDisplay == 'sent' ? 'active' : '')} href="#">Sent</a> 
-                <a className={"d-block px-3 py-4 text-white link-underline link-underline-opacity-0 " + (emailListToDisplay == 'deleted' ? 'active' : '')} href="#">Deleted</a> 
+                        }} className={"d-block px-3 py-4 text-white link-underline link-underline-opacity-0" + (emailListToDisplay == 'sent' ? ' active' : '')} href="#">Sent</a>
+                <a className={"d-block px-3 py-4 text-white link-underline link-underline-opacity-0" + (emailListToDisplay == 'deleted' ? ' active' : '')} href="#">Deleted</a>
             </div> 
         </>
     )

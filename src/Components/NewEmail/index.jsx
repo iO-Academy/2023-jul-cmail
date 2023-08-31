@@ -2,6 +2,12 @@ import "./NewEmail.css"
 
 const NewEmail = ({handleInput}) => {
 
+
+    // const isEmailValid =  /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+    // const validateEmail = () => {
+    //     if(handleInput.value && handleInput.match(isEmailValid))
+    // }
+
     return (
         <div className="col-12 h-xs-100 col-md-7 offset-md-2 offset-lg-1 col-lg-5 newEmail bg-white position-fixed border"> 
             <div className="mb-3">      

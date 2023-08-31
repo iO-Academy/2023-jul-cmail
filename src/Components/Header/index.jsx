@@ -11,28 +11,27 @@ const Header = ({inboxCounter,setEmailListToDisplay, emailListToDisplay}) => {
         <>
             <div className="col-12 d-flex justify-content-between align-items-center border border-secondary bg-secondary text-white">
                 <div className="col-2 d-md-none">
-                    <button onClick={() => {setDisplayMenu(!displayMenu)}} className="mx-3 border border-black btn btn-secondary text-center" type="button" aria-expanded="false">MENU</button>
+                    <button onClick={() => {setDisplayMenu(!displayMenu)}} className="mx-3 border border-black btn btn-secondary text-center" type="button" aria-expanded={displayMenu}>MENU</button>
                 </div>
                 <h1 className="col-7 px-4 py-2 d-flex align-self-center">Email Client</h1>
-                <div className="col-3 text-end pe-3">
-                    <i className="px-3 bi bi-person-circle fs-2"></i>
+                <div className="col-3 d-flex justify-content-end align-items-center pe-2 fs-3">
+                    <i className="px-3 bi bi-person-circle fs-1 text-black"></i>
                     <span>User Name</span>
                 </div>
             </div>
-            <div className={"col-4 col-md-1 h-100 bg-info text-dark d-md-block" + (displayMenu ? '' : ' d-none')}>
-                <a className="d-block px-2 py-3 text-white link-underline link-underline-opacity-0 bg-primary" href="#">New Email</a> <br />
+            <div className={"fs-4 col-4 col-md-2 col-lg-1 h-100 bg-info text-dark d-md-block " + (displayMenu ? '' : 'd-none')}>
+                <a className="d-block px-3 py-4 text-white link-underline link-underline-opacity-0 new-email" href="#">New Email</a> 
                 <a onClick={() => {
                     setEmailListToDisplay('inbox')
-                }} className={"d-block px-2 py-3 text-white link-underline link-underline-opacity-0 d-flex justify-content-between" + (emailListToDisplay == 'inbox' ? ' active' : '')} href="#">
+                }} className={"d-block px-3 py-4 text-white link-underline link-underline-opacity-0 d-flex justify-content-between " + (emailListToDisplay == 'inbox' ? 'active' : '')} href="#">
                     <span>Inbox</span>
                     <div><span className="badge text-bg-warning">{inboxCounter}</span></div>
-                </a> <br />
+                </a> 
                 <a onClick={() => {
                     setEmailListToDisplay('sent')
-                        }} className={"d-block px-2 py-3 text-white link-underline link-underline-opacity-0" + (emailListToDisplay == 'sent' ? ' active' : '')} href="#">Sent</a> <br />
-                <a className={"d-block px-2 py-3 text-white link-underline link-underline-opacity-0" + (emailListToDisplay == 'deleted' ? ' active' : '')} href="#">Deleted</a> <br />
+                        }} className={"d-block px-3 py-4 text-white link-underline link-underline-opacity-0 " + (emailListToDisplay == 'sent' ? 'active' : '')} href="#">Sent</a> 
+                <a className={"d-block px-3 py-4 text-white link-underline link-underline-opacity-0 " + (emailListToDisplay == 'deleted' ? 'active' : '')} href="#">Deleted</a> 
             </div> 
-            
         </>
     )
 }

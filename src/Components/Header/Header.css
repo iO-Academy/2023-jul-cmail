@@ -2,3 +2,20 @@
 .active {
     background-color: #00563B;
 }
+
+a:hover {
+    background-color: rgb(96, 225, 225);
+}
+
+.new-email {
+    background-color: rgb(74, 81, 217);
+}
+
+.new-email:hover {
+    background-color: rgb(62, 26, 223);
+}
+
+.menu {
+    top: 56px;
+    height: calc(100% - 56px);
+}

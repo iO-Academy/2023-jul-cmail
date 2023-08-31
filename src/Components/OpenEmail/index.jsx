@@ -39,7 +39,7 @@ const OpenEmail = ({emailId, setRefreshEmails, closeEmail}) => {
     
     return (
       <div className="p-md-5 pt-md-3 p-3 col-12 col-md-6 col-lg-8 openEmail">
-        {error === false ?
+        {!error ?
           (<>
             <Button onClick={closeEmail} text={'Close'}/> 
             <div className="border border-start-0 border-end-0 border-top border-bottom mt-3 py-5"> 

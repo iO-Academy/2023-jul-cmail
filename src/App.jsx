@@ -23,14 +23,14 @@ function App() {
     setNewEmail(true)
   }
 
-  const cancelNewEmail = () => {
+  const closeNewEmail = () => {
     setNewEmail(false)
   }
   
   return (
     <div className="row h-100 g-0">
       {sentSuccess !== undefined && <Alert success={sentSuccess} hideAlert={setSentSuccess} text={sentSuccess ? "Email sent successfully" : "Sending email is unsuccessful also Colin smells and Josh is a turnip"}/>}
-      {newEmail && <NewEmail cancelNewEmail={cancelNewEmail} setSentSuccess={setSentSuccess}/>}
+      {newEmail && <NewEmail closeNewEmail={closeNewEmail} setSentSuccess={setSentSuccess}/>}
       <Header inboxCounter={inboxCount} setEmailListToDisplay={setEmailListToDisplay} emailListToDisplay={emailListToDisplay} setNewEmail={setNewEmail} openNewEmail={openNewEmail} />
       {emailListToDisplay == 'inbox' && <Inbox emailId={emailId} setInboxCount={setInboxCount} setEmailId={setEmailId} refreshEmails={refreshEmails}/>}
       {emailListToDisplay == 'sent' && <SentBox emailId={emailId} setInboxCount={setInboxCount} setEmailId={setEmailId} refreshEmails={refreshEmails}/>}

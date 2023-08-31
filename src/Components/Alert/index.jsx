@@ -7,7 +7,7 @@ const Alert = ({success, text, hideAlert}) => {
     }, 5000)
 
     return (
-        <div class={"alert sent-message position-fixed z-2 " + (success ? "alert-primary" : "alert-danger")} role="alert">
+        <div className={"alert sent-message position-fixed z-2 " + (success ? "alert-primary" : "alert-danger")} role="alert">
             {text} 
         </div>
     )

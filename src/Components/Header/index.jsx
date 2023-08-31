@@ -3,9 +3,10 @@ import { useState } from "react"
 import "./Header.css"
 
 
-const Header = ({inboxCounter,setEmailListToDisplay, emailListToDisplay}) => {
+const Header = ({inboxCounter,setEmailListToDisplay, emailListToDisplay, openNewEmail}) => {
 
     const [displayMenu, setDisplayMenu] = useState(false)
+
 
     return (
         <>
@@ -19,8 +20,9 @@ const Header = ({inboxCounter,setEmailListToDisplay, emailListToDisplay}) => {
                     <span>User Name</span>
                 </div>
             </div>
-            <div className={"z-1 fs-4 col-4 col-md-2 col-lg-1 h-100 bg-info text-dark d-md-block" + (displayMenu ? '' : ' d-none')}>
-                <a className="d-block px-3 py-4 text-white link-underline link-underline-opacity-0 new-email" href="#">New Email</a>
+            <div className={"z-1 fs-4 col-4 col-md-2 col-lg-1 h-100 bg-info text-dark d-md-block " + (displayMenu ? '' : 'd-none')}>
+                <a onClick={openNewEmail}
+                className="d-block px-3 py-4 text-white link-underline link-underline-opacity-0 new-email" href="#">New Email</a> 
                 <a onClick={() => {
                     setEmailListToDisplay('inbox')
                 }} className={"d-block px-3 py-4 text-white link-underline link-underline-opacity-0 d-flex justify-content-between" + (emailListToDisplay == 'inbox' ? ' active' : '')} href="#">

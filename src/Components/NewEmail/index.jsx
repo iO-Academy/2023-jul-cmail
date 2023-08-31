@@ -54,17 +54,14 @@ const NewEmail = ({closeNewEmail, setSentSuccess}) => {
     return (
         <div className="col-12 col-md-7 offset-md-2 offset-lg-1 col-lg-7 newEmail bg-white position-fixed border"> 
             <div className="mb-3">      
-                <label htmlFor="to" className="form-label"></label>
-                <input onBlur={handleAddress} type="email" className={"form-control form-control-lg " + (error ? "is-invalid" : '')} placeholder="To"></input>
+                <input onBlur={handleAddress} type="email" className={"form-control form-control-lg " + (error ? "is-invalid" : '')} placeholder="To"/>
                 <div className="ps-2 mt-2 fs-6 invalid-feedback">{error}</div>
             </div>
             <div className="mb-3">
-                <label htmlFor="subject" className="form-label"></label>
-                <input onInput={handleSubject} className="form-control form-control-lg" placeholder="Subject"></input>
+                <input onInput={handleSubject} className="form-control form-control-lg" placeholder="Subject"/>
             </div>
             <div className="mb-3">
-                <label htmlFor="emailContent" className="form-label"></label>
-                <textarea onInput={handleBody} className="form-control" rows="15"></textarea>
+                <textarea onInput={handleBody} className="form-control" rows="15"/>
             </div>
             <div className="mt-4 ms-2 d-flex justify-content-end">
                 <button type="button" className="btn btn-secondary m-1" onClick={closeNewEmail}>Cancel</button>

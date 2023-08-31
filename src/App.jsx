@@ -1,7 +1,8 @@
 import Header from './Components/Header'
 import OpenEmail from './Components/OpenEmail'
 import Inbox from './Components/Inbox'
-import {useState } from 'react'
+import { useState } from 'react'
+import NewEmail from './Components/NewEmail'
 import SentBox from './Components/SentBox'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
   
   return (
     <div className="row h-100 g-0">
+      <NewEmail/>
       <Header inboxCounter={inboxCount} setEmailListToDisplay={setEmailListToDisplay} emailListToDisplay={emailListToDisplay}/>
       {emailListToDisplay == 'inbox' && <Inbox emailId={emailId} setInboxCount={setInboxCount} setEmailId={setEmailId} refreshEmails={refreshEmails}/>}
       {emailListToDisplay == 'sent' && <SentBox emailId={emailId} setInboxCount={setInboxCount} setEmailId={setEmailId} refreshEmails={refreshEmails}/>}

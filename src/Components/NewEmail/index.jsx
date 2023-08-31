@@ -1,19 +1,26 @@
+import { useState } from "react"
 import "./NewEmail.css"
 
 const NewEmail = ({handleInput}) => {
 
+    const [email, setEmail] = useState('')
+    const [error, setError] = useState(false)
 
+    function isValidEmail() {
+        return /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(handleInput)
+    }
 
-    // const isEmailValid =  /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-    // const validateEmail = () => {
-    //     if(handleInput.value && handleInput.match(isEmailValid))
-    // }
-        // const  isValidEmail = () => {
-        //     if(!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(handleInput) ) {
-        //         alert("You have entered a invalid email")
-        //     }
-        // } 
-
+    const handleChange = (e) => {
+        if(!isValidEmail(handleChange)){
+            setError('Email is invalid')
+            console.log("invalid email")
+            e.preventDefault()
+        } else {
+            // setError("")
+            // setError(null)
+        }
+        setEmail(handleChange)
+    }
     return (
         <div className="col-12 col-md-7 offset-md-2 offset-lg-1 col-lg-5 newEmail bg-white position-fixed border"> 
             <div className="mb-3">      
@@ -30,10 +37,10 @@ const NewEmail = ({handleInput}) => {
                 </div>
             <div className="mt-4 ms-2 d-flex justify-content-end">
                 <button type="button" className="btn btn-secondary m-1">Cancel</button>
-                <button type="button" className="btn btn-success m-1">Send</button>
+                <button type="button" className="btn btn-success m-1" onClick={handleChange}>Send</button>
             </div>
         </div>
     )
 }
 
-export default NewEmail        
+export default NewEmail 

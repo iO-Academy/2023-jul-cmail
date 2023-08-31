@@ -1,8 +1,9 @@
 import "bootstrap-icons/font/bootstrap-icons.css"
 import { useState } from "react"
-import './Header.css'
+import "./Header.css"
 
-const Header = ({inboxCounter}) => {
+
+const Header = ({inboxCounter,setEmailListToDisplay, emailListToDisplay}) => {
 
     const [displayMenu, setDisplayMenu] = useState(false)
 
@@ -18,14 +19,18 @@ const Header = ({inboxCounter}) => {
                     <span>User Name</span>
                 </div>
             </div>
-            <div className={"fs-4 col-4 col-md-2 col-lg-1 h-100 bg-info text-dark d-md-block" + (displayMenu ? '' : ' d-none')}>
-                <a className="d-block px-3 py-4 text-white link-underline link-underline-opacity-0 new-email" href="#">New Email</a>
-                <a className="d-block px-3 py-4 text-white link-underline link-underline-opacity-0 d-flex justify-content-between" href="#">
+            <div className={"fs-4 col-4 col-md-2 col-lg-1 h-100 bg-info text-dark d-md-block " + (displayMenu ? '' : 'd-none')}>
+                <a className="d-block px-3 py-4 text-white link-underline link-underline-opacity-0 new-email" href="#">New Email</a> 
+                <a onClick={() => {
+                    setEmailListToDisplay('inbox')
+                }} className={"d-block px-3 py-4 text-white link-underline link-underline-opacity-0 d-flex justify-content-between " + (emailListToDisplay == 'inbox' ? 'active' : '')} href="#">
                     <span>Inbox</span>
                     <div><span className="badge text-bg-warning">{inboxCounter}</span></div>
-                </a>
-                <a className="d-block px-3 py-4 text-white link-underline link-underline-opacity-0" href="#">Sent</a>
-                <a className="d-block px-3 py-4 text-white link-underline link-underline-opacity-0" href="#">Deleted</a>
+                </a> 
+                <a onClick={() => {
+                    setEmailListToDisplay('sent')
+                        }} className={"d-block px-3 py-4 text-white link-underline link-underline-opacity-0 " + (emailListToDisplay == 'sent' ? 'active' : '')} href="#">Sent</a> 
+                <a className={"d-block px-3 py-4 text-white link-underline link-underline-opacity-0 " + (emailListToDisplay == 'deleted' ? 'active' : '')} href="#">Deleted</a> 
             </div> 
         </>
     )

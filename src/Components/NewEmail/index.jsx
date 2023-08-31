@@ -1,11 +1,12 @@
 import {useState } from "react"
 import "./NewEmail.css"
 
-const NewEmail = ({cancelNewEmail, handleInput}) => {
-
+const NewEmail = ({cancelNewEmail, setSentSuccess}) => {
+    
     const [address, setAddress] = useState('')
     const [subject, setSubject] = useState('')
     const [body, setBody] = useState('')
+    
 
     const handleAddress = (e) => {
         setAddress(e.target.value)
@@ -36,6 +37,9 @@ const NewEmail = ({cancelNewEmail, handleInput}) => {
         const emailResponseData = await response.json()
         if (emailResponseData.data.sent) {
             cancelNewEmail()
+            setSentSuccess(true)
+        } else {
+            setSentSuccess(false)
         }
         console.log(emailResponseData) 
     }

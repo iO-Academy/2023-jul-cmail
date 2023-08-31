@@ -39,7 +39,7 @@ const NewEmail = ({closeNewEmail, setSentSuccess}) => {
             method: 'POST',
             body: JSON.stringify(sentEmail),
             headers: {
-                'content-type': 'application/json'
+                'Content-Type': 'application/json'
             }
         })
         const emailResponseData = await response.json()

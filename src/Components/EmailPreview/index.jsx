@@ -1,19 +1,20 @@
 import { useEffect, useState } from "react"
+import {formatDate} from "../../Utilities/DateFormatter"
 
-const EmailPreview = ({name, subject, body, date_created, read}) => {
+const EmailPreview = ({name, subject, body, date_created, read, setEmailId, id, selected}) => {
     const [formattedDate, setFormattedDate] = useState()
     
     useEffect(() => {
-        const dateObj = new Date(date_created)
-        const day = dateObj.getDate()
-        const month = dateObj.getMonth()
-        const year = dateObj.getFullYear()
-        const formattedDate = `${day}/${month}/${year}`
+        const formattedDate = formatDate(date_created)
         setFormattedDate(formattedDate)
     }, [date_created])
 
+    const handleClick = (e) => {
+        setEmailId(id)
+      }
+
     return (
-        <div className={"border-bottom p-3" + (read == 0 ? ' text-bg-secondary border-white' : '')}>
+        <div onClick={handleClick} className={"border-bottom p-3" + (read == 0 ? ' text-bg-secondary border-white' : '') + (selected ? ' bg-primary text-white' : '')}>
             <div className="card-body">
                 <div className="d-flex justify-content-between">
                     <h2 className="card-title fs-4">{name}</h2>

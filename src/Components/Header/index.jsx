@@ -8,7 +8,7 @@ const Header = ({inboxCounter,setEmailListToDisplay, emailListToDisplay, openNew
 
     return (
         <>
-            <div className="col-12 d-flex justify-content-between align-items-center border-secondary bg-secondary text-white">
+            <header className="col-12 d-flex justify-content-between align-items-center border-secondary bg-secondary text-white">
                 <div className="col-2 d-md-none">
                     <button 
                         onClick={() => {setDisplayMenu(!displayMenu)}} 
@@ -20,11 +20,11 @@ const Header = ({inboxCounter,setEmailListToDisplay, emailListToDisplay, openNew
                     </button>
                 </div>
                 <h1 className="col-7 px-4 py-2 d-flex align-self-center">Email Client</h1>
-                <div className="col-3 d-flex justify-content-end align-items-center pe-2 fs-3">
+                <div className="col-3 d-flex justify-content-end align-items-center pe-2 userName">
                     <i className="px-3 bi bi-person-circle fs-1 text-black"></i>
                     <span>User Name</span>
                 </div>
-            </div>
+            </header>
             <div className={"z-1 fs-4 col-4 col-md-2 col-lg-1 h-100 bg-info text-dark d-md-block " + (displayMenu ? '' : 'd-none')}>
                 <a 
                     onClick={openNewEmail}

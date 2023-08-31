@@ -29,7 +29,7 @@ const Header = ({inboxCounter,setEmailListToDisplay, emailListToDisplay}) => {
                 </a> <br />
                 <a onClick={() => {
                     setEmailListToDisplay('sent')
-                }} className={"d-block px-2 py-3 text-white link-underline link-underline-opacity-0" + (emailListToDisplay == 'sent' ? ' active' : '')} href="#">Sent</a> <br />
+                        }} className={"d-block px-2 py-3 text-white link-underline link-underline-opacity-0" + (emailListToDisplay == 'sent' ? ' active' : '')} href="#">Sent</a> <br />
                 <a className={"d-block px-2 py-3 text-white link-underline link-underline-opacity-0" + (emailListToDisplay == 'deleted' ? ' active' : '')} href="#">Deleted</a> <br />
             </div> 
             

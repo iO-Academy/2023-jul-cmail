@@ -1,8 +1,15 @@
-const Alert = () => {
+import './Alert.css'
+
+const Alert = ({success, text, hideAlert}) => {
+
+    setTimeout(() => {
+        hideAlert(undefined)
+    }, 5000)
+
     return (
-        <>
-        
-        </>
+        <div className={"alert sent-message position-fixed z-2 " + (success ? "alert-primary" : "alert-danger")} role="alert">
+            {text} 
+        </div>
     )
 }
 

@@ -36,7 +36,8 @@ const NewEmail = ({cancelNewEmail, handleInput}) => {
         let emailResponseData = await response.json()
         if (emailResponseData.data.sent) {
             cancelNewEmail()
-        } 
+        }
+        console.log(emailResponseData) 
     }
 
     return (

@@ -14,3 +14,8 @@ a:hover {
 .new-email:hover {
     background-color: rgb(62, 26, 223);
 }
+
+.menu {
+    top: 56px;
+    height: calc(100% - 56px);
+}

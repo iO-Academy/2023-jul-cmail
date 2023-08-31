@@ -9,14 +9,20 @@ import NewEmail from './Components/NewEmail'
 function App() {
   const [inboxCount, setInboxCount] = useState(0)
   const [emailId, setEmailId] = useState(false)
+  const [refreshEmails, setRefreshEmails] = useState(false)
   const [emailListToDisplay, setEmailListToDisplay] = useState('inbox')
+
+  const closeEmail = () => {
+    setEmailId(false)
+  }
+  
   return (
     <div className="row h-100 g-0">
       <NewEmail/>
       <Header inboxCounter={inboxCount} setEmailListToDisplay={setEmailListToDisplay} emailListToDisplay={emailListToDisplay}/>
-      {emailListToDisplay == 'inbox' && <Inbox emailId={emailId} setInboxCount={setInboxCount} setEmailId={setEmailId} />}
-      {emailListToDisplay == 'sent' && <SentBox emailId={emailId} setInboxCount={setInboxCount} setEmailId={setEmailId}/>}
-      {emailId && <OpenEmail emailId={emailId}/>}
+      {emailListToDisplay == 'inbox' && <Inbox emailId={emailId} setInboxCount={setInboxCount} setEmailId={setEmailId} refreshEmails={refreshEmails}/>}
+      {emailListToDisplay == 'sent' && <SentBox emailId={emailId} setInboxCount={setInboxCount} setEmailId={setEmailId} refreshEmails={refreshEmails}/>}
+      {emailId && <OpenEmail emailId={emailId} setRefreshEmails={setRefreshEmails} closeEmail={closeEmail}/>}
     </div>
   )
 }

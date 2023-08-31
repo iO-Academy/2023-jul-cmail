@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import EmailList from "../EmailList"
 
-const Inbox = ({setInboxCount, setEmailId, emailId}) => {
+const Inbox = ({setInboxCount, setEmailId, emailId, refreshEmails}) => {
     const [emails, setEmails ] = useState(false)
 
     const getEmails = async () => {
@@ -19,6 +19,10 @@ const Inbox = ({setInboxCount, setEmailId, emailId}) => {
     useEffect(() => {
         getEmails()
     }, [])
+
+    useEffect(() => {
+        getEmails()
+    }, [refreshEmails])
     
     return (
         <>

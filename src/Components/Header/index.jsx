@@ -1,6 +1,7 @@
 import "bootstrap-icons/font/bootstrap-icons.css"
 import { useState } from "react"
-import './Header.css'
+import "./Header.css"
+
 
 const Header = ({inboxCounter,setEmailListToDisplay, emailListToDisplay}) => {
 

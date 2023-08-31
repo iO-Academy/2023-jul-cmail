@@ -11,7 +11,6 @@ const SentBox = ({setInboxCount, setEmailId, emailId}) => {
             setEmails(emails.data)
         }
 
-    
         useEffect(() => {
             getEmails()
         }, [setEmailId])

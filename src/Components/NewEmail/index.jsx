@@ -33,7 +33,7 @@ const NewEmail = ({cancelNewEmail, handleInput}) => {
                 'content-type': 'application/json'
             }
         })
-        let emailResponseData = await response.json()
+        const emailResponseData = await response.json()
         if (emailResponseData.data.sent) {
             cancelNewEmail()
         }

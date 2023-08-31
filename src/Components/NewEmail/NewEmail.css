@@ -1,10 +1,11 @@
 .newEmail {
-    top:57px;
+    top: 54px;
     padding: 20px;
 }
 
 @media screen and (max-width: 768px) {
     .newEmail {
         height: 100%;
+        top: 54px;
     }
 }

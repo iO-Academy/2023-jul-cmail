@@ -1,4 +1,4 @@
 .email-list {
-    height: calc(100% - 56px);
+    height: calc(100% - 54px);
     overflow: auto;
 }
